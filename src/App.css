@@ -1,0 +1,139 @@
+/* General styles */
+@font-face {
+  font-family: 'ArmAllegro';
+  src: url('../public/fonts/ArmAllegroU.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Noto Serif Armenian', serif;
+  background: #f0f0f0; /* Light background color for the page */
+}
+
+.invitation-card {
+  text-align: center;
+  padding: 20px;
+  font-family: 'ArmAllegro', cursive;
+}
+
+h1 {
+  font-family: 'ArmAllegro', cursive;
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.invitation-image {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease 0s;
+  border-radius: 28px;
+}
+
+.invitation-image:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  max-width: 25%;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 8px 8px 16px #c7c7c7, -8px -8px 16px #ffffff;
+}
+
+.contents-box {
+  margin-left: 20px;
+  max-width: 60%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.content-container {
+  padding: 20px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 8px 8px 16px #c7c7c7, -8px -8px 16px #ffffff;
+}
+
+p {
+  font-size: 28px;
+  line-height: 1.5em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.countdown-timer {
+  font-size: 1.5em;
+  color: #d9534f;
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on tablets and small desktops */
+  }
+
+  .image-container {
+    max-width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .contents-box {
+    max-width: 100%; /* Full width on smaller screens */
+    margin-left: 0;
+  }
+
+  .content-container {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .countdown-timer {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .invitation-card {
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .countdown-timer {
+    font-size: 1em;
+  }
+
+  .image-container {
+    margin-bottom: 15px;
+  }
+
+  .contents-box {
+    gap: 15px;
+  }
+
+  .content-container {
+    padding: 5px;
+  }
+}
